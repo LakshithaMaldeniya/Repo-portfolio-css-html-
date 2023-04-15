@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #1e2328;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+.header-outer {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+    display: flex;
+    background-color: var(--bg-color);
+
+    -webkit-box-shadow: 6px 5px 24px -9px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: 6px 5px 24px -9px rgba(0, 0, 0, 0.56);
+    box-shadow: 6px 5px 24px -9px rgba(0, 0, 0, 0.56);
+}
+
+.hedder-left, .hedder-right {
+    flex: 1;
+    /*border: 1px solid red;*/
+
+}
+
+.hedder-left {
+    display: flex;
+    align-items: flex-end;
+}
+
+/*=================navigation bar=====================*/
+
+.hedder-right > ul {
+    width: 50vw;
+    height: 10vh;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    /*border: 1px solid white;*/
+}
+
+.hedder-right {
+    display: flex;
+}
+
+.hedder-right > ul > li {
+    margin-right: 10px;
+    border: 3px solid transparent;
+    padding: 5px 15px;
+}
+
+.hedder-right > ul > li > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.hedder-right > ul > li:hover {
+    /*border-bottom: 3px solid blue;*/
+}
+
+.hedder-right > ul > li > a:hover {
+    color: var(--main-color);
+}
+
+/*=================navigation bar=====================*/
+
+.hedder-left {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    min-height: 100%;
+    background: var(--bg-color);
+    align-items: center;
+    justify-content: left;
+    margin-left: 3vw;
+}
+
+
+h2 {
+    color: var(--text-color);
+    font-size: 2vw;
+    position: relative;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.07vw var(--bg-color);
+}
+
+h2::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: var(--main-color);
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-text);
+    border-right: 2px solid var(--text-color);
+    -webkit-text-stroke: 0vw var(--bg-color);
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+/*=================logo=====================*/
+
+.bx-menu {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/*========================Home Screen=============================*/
+
+.Home {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-home {
+    width: 25vw;
+    height: 60vh;
+}
+
+.home-contant {
+    margin-top: 10vh;
+    margin-right: 10vw;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.home-contant h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.home-contant h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.introductionme {
+    font-size: 1rem;
+}
+
+.social-media a {
+    margin-top: 5vh;
+    margin-right: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--main-color);
+    border-radius: 100%;
+    background-color: transparent;
+    font-size: 1rem;
+    color: var(--main-color);
+
+}
+
+.social-media a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+.btn {
+    width: 10vw;
+    height: 5vh;
+    margin-top: 3rem;
+    border: 0.3rem solid transparent;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--second-bg-color);
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-weight: 500;
+}
+
+.btn:hover {
+    border: 0.3rem solid var(--bg-color);
+}
+
+.home-contant h3 > span {
+    color: var(--main-color);
+}
+
+
+/*========================Home Screen=============================*/
+/*========================About Screen=============================*/
+.about {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-aboutme {
+    width: 25vw;
+    height: 60vh;
+    margin: 0rem 10rem;
+}
+
+.about-content {
+    padding-top: 5rem;
+    color: var(--text-color);
+    display: flex;
+}
+
+.image-aboutme {
+
+}
+
+.text {
+    margin-top: 4rem;
+}
+
+.text > h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.discription {
+    font-size: 1rem;
+    width: 45vw;
+}
+
+.sub {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.me {
+    color: var(--main-color);
+}
+
+/*========================About Screen=============================*/
+/*========================Technology Screen=============================*/
+.technology {
+    margin: 0;
+    padding-top: 5vh;
+    height: 100vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hed {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-top: 2vw;
+}
+
+.title {
+    margin-top: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagecontent {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    height: 70vh;
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemimage {
+    width: 5vw;
+    height: 5vh;
+    border: 1px solid;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagecontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item {
+    margin: 20px 50px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.imagetag{
+    width: 120px;
+    height: 120px;
+
+}
+.box {
+    cursor: pointer;
+}
+
+.box.vibration {
+    animation: vibration 0.1s infinite;
+}
+
+@keyframes vibration {
+    from {
+        transform: rotate(0.75deg);
+    }
+    to {
+        transform: rotate(-0.75deg);
+    }
+}
+
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+/*===================Technology page end========================*/
+/*===================Project page end========================*/
+.projects {
+    margin: 0;
+    padding-top: 5vh;
+    height: 100vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*===================Project page end========================*/
+
